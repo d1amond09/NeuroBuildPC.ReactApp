@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="NeuroBuildPC.ReactApp/neurobuildpc.reactapp.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>
