@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosClient = axios.create({
-    baseURL: 'https://localhost:7127',
+    baseURL: 'https://neuro-build-pc-2026.runasp.net',
     headers: {
         'Content-Type': 'application/json',
     }
