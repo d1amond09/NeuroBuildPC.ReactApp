@@ -1,13 +1,15 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useContext } from 'react';
+import { AuthContext } from './AuthContext';
 
 export const BuilderContext = createContext();
 
 export function BuilderProvider({ children }) {
+    const { user } = useContext(AuthContext);
     const [activeBuildId, setActiveBuildId] = useState(() => {
         return localStorage.getItem('neurobuild_active_id') || null;
     });
 
-    const userId = "00000000-0000-0000-0000-000000000001";
+    const userId = user?.id || "00000000-0000-0000-0000-000000000001";
 
     useEffect(() => {
         if (activeBuildId) {
